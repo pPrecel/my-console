@@ -1,0 +1,31 @@
+call plug#begin('~/.vim/plugged')
+
+Plug 'airblade/vim-gitgutter'
+Plug 'itchyny/lightline.vim'
+Plug 'junegunn/fzf'
+
+call plug#end()
+
+set mouse=a
+
+set number relativenumber
+
+set ttymouse=sgr
+
+set updatetime=500
+
+set balloondelay=250
+
+autocmd! BufEnter,BufNewFile *.go syntax on
+autocmd! BufLeave *.go syntax off
+
+set autoindent
+set smartindent
+filetype indent on
+
+set backspace=2
+
+if has("patch-8.1.1904")
+  set completeopt+=popup
+    set completepopup=align:menu,border:off,highlight:Pmenu
+    endif
