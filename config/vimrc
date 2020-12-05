@@ -1,3 +1,6 @@
+" ==============================
+" Load plugins
+" ==============================
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
@@ -6,12 +9,16 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 call plug#end()
+" ==============================
 
+" Enable mouse in vim
 set mouse=a
+set ttymouse=sgr
+
+" Show status bar
+set laststatus=2
 
 set number relativenumber
-
-set ttymouse=sgr
 
 set updatetime=500
 
