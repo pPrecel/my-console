@@ -10,23 +10,26 @@ PATH=$PATH:/usr/local/opt/helm@2/bin
 PATH=$PATH:/Users/i517616/Library/Python/3.7/bin
 
 ## ==== SET UP PLUGINS ====
-plugins=(
-    history
-    zsh-autopair 
-    zsh-autosuggestions
-    iterm2
-    colored-man-pages
-    tmux
-    zsh-tmux-rename
-    #alias-tips
+source /usr/local/share/antigen/antigen.zsh
 
-    kyma-zsh
-    kubectl
-    docker-zsh-completion
-    zsh-brew-services
-    git
-)
-source $ZSH/oh-my-zsh.sh
+antigen use oh-my-zsh
+
+antigen bundle git
+antigen bundle iterm2
+antigen bundle history
+antigen bundle colored-man-pages
+antigen bundle kubectl
+antigen bundle tmux
+
+antigen bundle sei40kr/zsh-tmux-rename
+antigen bundle pPrecel/kyma-zsh
+antigen bundle hlissner/zsh-autopair
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle vasyharan/zsh-brew-services
+
+antigen theme /Users/i517616/.oh-my-zsh/custom/themes gister.zsh-theme --no-local-clone
+
+antigen apply
 ## =========================
 
 alias mockery="$GOPATH/bin/mockery"
