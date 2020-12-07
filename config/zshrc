@@ -28,13 +28,14 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle vasyharan/zsh-brew-services
 
 ## ==== SET UP THEME ====
-if ! test -f "$ZSH/custom/themes/natural-zsh-theme/natural-zsh-theme.zsh-theme"
+if ! test -f "$ZSH/custom/themes/natural-zsh-theme/natural.zsh-theme"
 then
     git clone "https://github.com/pPrecel/natural-zsh-theme" \
         "$ZSH/custom/themes/natural-zsh-theme"
 fi
 
-antigen theme "$ZSH/custom/themes/natural-zsh-theme" "natural-zsh-theme.zsh-theme" --no-local-clone
+antigen theme "$ZSH/custom/themes/natural-zsh-theme" \
+    "natural.zsh-theme" --no-local-clone
 
 antigen apply
 ## =========================
