@@ -26,5 +26,3 @@ This repository contains all themes, plugins, and other configs for my console
 * [itchyny/lightline.vim](https://github.com/itchyny/lightline.vim)
 * [junegunn/fzf](https://github.com/junegunn/fzf)
 * [junegunn/fzf.vim](https://github.com/junegunn/fzf.vim)
-# tmux plugins
-* [dracula tmux](https://github.com/dracula/tmux)
