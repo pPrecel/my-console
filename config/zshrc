@@ -21,7 +21,6 @@ antigen bundle colored-man-pages
 antigen bundle kubectl
 antigen bundle tmux
 
-antigen bundle sei40kr/zsh-tmux-rename
 antigen bundle pPrecel/kyma-zsh
 antigen bundle hlissner/zsh-autopair
 antigen bundle zsh-users/zsh-autosuggestions
@@ -40,6 +39,7 @@ antigen theme "$ZSH/custom/themes/natural-zsh-theme" \
 antigen apply
 ## =========================
 
+alias ls='lsd'
 alias mockery="$GOPATH/bin/mockery"
 alias pp="cd ${GOPATH}src/github.com/pPrecel"
 alias kp="cd ${GOPATH}src/github.com/kyma-project"
