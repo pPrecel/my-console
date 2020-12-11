@@ -1,43 +1,35 @@
-export ZSH_THEME="gister"
 export GOPATH="$HOME/go/"
 export ZSH_TMUX_AUTOSTART=true	
 export ZSH_DISABLE_COMPFIX=true
-export ZSH="/Users/i517616/.oh-my-zsh"
 PATH=$PATH:$GOPATH/bin
 PATH=$PATH/usr/local/opt/qt/bin
 PATH=$PATH:/Users/i517616/go/bin
 PATH=$PATH:/usr/local/opt/helm@2/bin
 PATH=$PATH:/Users/i517616/Library/Python/3.7/bin
 
-## ==== SET UP PLUGINS ====
-source /usr/local/share/antigen/antigen.zsh
+# ## ==== SET UP PLUGINS ====
+source <(antibody init)
 
-antigen use oh-my-zsh
+antibody bundle robbyrussell/oh-my-zsh
+antibody bundle "
+    pPrecel/kyma-zsh
+    hlissner/zsh-autopair
+    zsh-users/zsh-autosuggestions
+    vasyharan/zsh-brew-services
 
-antigen bundle git
-antigen bundle iterm2
-antigen bundle history
-antigen bundle colored-man-pages
-antigen bundle kubectl
-antigen bundle tmux
+    robbyrussell/oh-my-zsh path:plugins/colored-man-pages
+    robbyrussell/oh-my-zsh path:plugins/kubectl
+    robbyrussell/oh-my-zsh path:plugins/git
+    robbyrussell/oh-my-zsh path:plugins/iterm2
+    robbyrussell/oh-my-zsh path:plugins/history
+    robbyrussell/oh-my-zsh path:plugins/tmux
+"
 
-antigen bundle pPrecel/kyma-zsh
-antigen bundle hlissner/zsh-autopair
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle vasyharan/zsh-brew-services
-
-## ==== SET UP THEME ====
-if ! test -f "$ZSH/custom/themes/natural-zsh-theme/natural.zsh-theme"
-then
-    git clone "https://github.com/pPrecel/natural-zsh-theme" \
-        "$ZSH/custom/themes/natural-zsh-theme"
-fi
-
-antigen theme "$ZSH/custom/themes/natural-zsh-theme" \
-    "natural.zsh-theme" --no-local-clone
-
-antigen apply
-## =========================
+# Load theme from the bundle
+antibody bundle "pPrecel/natural-zsh-theme"
+source "$(antibody home)/https-COLON--SLASH--SLASH-github\
+.com-SLASH-pPrecel-SLASH-natural-zsh-theme/natural.zsh-theme"
+# ## =========================
 
 alias ls='lsd'
 alias mockery="$GOPATH/bin/mockery"

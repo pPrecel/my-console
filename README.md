@@ -4,7 +4,7 @@ This repository contains all themes, plugins, and other configs for my console
 # prerequisites
 ## zsh:
 * [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
-* [antigen](https://github.com/zsh-users/antigen)
+* [antibody](https://getantibody.github.io/)
 
 ## vim:
 * [vim](https://github.com/vim/vim) 
