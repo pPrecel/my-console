@@ -1,3 +1,6 @@
+# ARCHIVED
+This repository now takes a part of [my new project](https://github.com/pPrecel/dotfiles.fish).
+
 # my-console
 This repository contains all themes, plugins, and other configs for my console
 ![](my-console.png)
